@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block title %}AURA — App Urbana de Reciclaje Ambiental{% endblock %}
+
+{% block body %}
+<header class="site-header">
+  <nav class="nav-shell" aria-label="Navegación principal">
+    <a class="brand" href="#inicio" aria-label="AURA, inicio">
+      <span class="brand-mark"><i data-lucide="leaf"></i></span>
+      <span class="brand-copy"><strong>AURA</strong><small>APP URBANA DE RECICLAJE AMBIENTAL</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+      <i data-lucide="menu"></i>
+    </button>
+    <div class="nav-links" id="primary-nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#mapa">Mapa de reciclaje</a>
+      <a href="#reciclar">¿Cómo reciclar?</a>
+      <a href="#sobre-aura">Sobre AURA</a>
+      <a class="nav-cta" href="#mapa">Encontrá tu punto <i data-lucide="arrow-up-right"></i></a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero paper-grain" id="inicio">
+    <div class="hero-copy reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> LAS HERAS, MENDOZA <span class="eyebrow-divider">·</span> COMPROMISO AMBIENTAL</div>
+      <h1 class="text-forest">EL FUTURO<br>NO SE TIRA,<br><em>SE RECICLA.</em></h1>
+      <p class="hero-lead">Descubrí cómo reciclar, encontrá los puntos verdes de Las Heras y convertite en parte del cambio.</p>
+      <div class="hero-actions">
+        <a class="button button-dark" href="#mapa">ENCONTRAR PUNTOS VERDES <i data-lucide="arrow-down-right"></i></a>
+        <a class="button button-outline" href="#reciclar">APRENDER A RECICLAR <i data-lucide="arrow-down"></i></a>
+      </div>
+      <div class="hero-footnote"><i data-lucide="map-pin"></i> Hecho para nuestra comunidad, con los pies en la tierra.</div>
+    </div>
+    <div class="hero-art reveal" aria-label="Ilustración de una botella reutilizable y una planta">
+      <div class="sun-disc"></div>
+      <div class="art-stamp"><span>MENOS<br>RESIDUOS</span><i data-lucide="recycle"></i><span>MÁS<br>FUTURO</span></div>
+      <div class="plant plant-one"><span class="stem"></span><i class="leaf-shape leaf-a"></i><i class="leaf-shape leaf-b"></i><i class="leaf-shape leaf-c"></i></div>
+      <div class="plant plant-two"><span class="stem"></span><i class="leaf-shape leaf-a"></i><i class="leaf-shape leaf-b"></i></div>
+      <div class="bottle">
+        <div class="bottle-cap"></div><div class="bottle-neck"></div>
+        <div class="bottle-body"><span class="bottle-label"><i data-lucide="sprout"></i><b>VOLVER<br>A LA TIERRA</b><small>REUTILIZÁ</small></span></div>
+      </div>
+      <div class="art-caption">CIRCULAR ES<br>VOLVER A EMPEZAR <i data-lucide="move-up-right"></i></div>
+      <span class="art-sparkle sparkle-one">✳</span><span class="art-sparkle sparkle-two">✳</span>
+    </div>
+    <div class="hero-bottomline"><span>01 — UNA COMUNIDAD MÁS CONSCIENTE</span><span>DESLIZÁ PARA DESCUBRIR <i data-lucide="arrow-down"></i></span></div>
+  </section>
+
+  <section class="ticker" aria-label="Separar es el primer paso">
+    <div class="ticker-track"><span>SEPARAR ES EL PRIMER PASO</span><i data-lucide="asterisk"></i><span>CADA RESIDUO TIENE OTRO DESTINO</span><i data-lucide="asterisk"></i><span>LAS HERAS MÁS CIRCULAR</span><i data-lucide="asterisk"></i><span>SEPARAR ES EL PRIMER PASO</span><i data-lucide="asterisk"></i><span>CADA RESIDUO TIENE OTRO DESTINO</span><i data-lucide="asterisk"></i><span>LAS HERAS MÁS CIRCULAR</span><i data-lucide="asterisk"></i></div>
+  </section>
+
+  <section class="map-section section-pad" id="mapa">
+    <div class="section-heading reveal">
+      <div><span class="section-kicker">01 / ENCONTRÁ CERCA TUYO</span><h2>El mapa del<br><em>cambio local.</em></h2></div>
+      <p>Un buen hábito empieza por saber adónde llevar cada material. Explorá el mapa de Las Heras y encontrá tu próximo destino verde.</p>
+    </div>
+    <div class="map-layout reveal">
+      <aside class="map-sidebar">
+        <div class="map-search-wrap"><i data-lucide="search"></i><input id="point-search" type="search" placeholder="Buscar por nombre o dirección" aria-label="Buscar puntos de reciclaje"><kbd>⌕</kbd></div>
+        <p class="filter-label">FILTRAR POR MATERIAL</p>
+        <div class="filter-list" id="material-filters" aria-label="Filtrar por material">
+          <button class="filter-chip is-active" type="button" data-material="all" aria-pressed="true"><span class="filter-dot all-dot"></span>Todos los materiales</button>
+          <button class="filter-chip" type="button" data-material="plástico" aria-pressed="false"><span class="filter-dot plastic-dot"></span>Plástico</button>
+          <button class="filter-chip" type="button" data-material="papel y cartón" aria-pressed="false"><span class="filter-dot paper-dot"></span>Papel y cartón</button>
+          <button class="filter-chip" type="button" data-material="vidrio" aria-pressed="false"><span class="filter-dot glass-dot"></span>Vidrio</button>
+          <button class="filter-chip" type="button" data-material="metales" aria-pressed="false"><span class="filter-dot metal-dot"></span>Metales</button>
+          <button class="filter-chip" type="button" data-material="aceite usado" aria-pressed="false"><span class="filter-dot oil-dot"></span>Aceite usado</button>
+          <button class="filter-chip" type="button" data-material="residuos orgánicos" aria-pressed="false"><span class="filter-dot organic-dot"></span>Residuos orgánicos</button>
+        </div>
+        <div class="point-list-head"><span>PUNTOS EN TU BÚSQUEDA</span><span id="point-count">—</span></div>
+        <div class="point-results" id="point-results" aria-live="polite"></div>
+        <div class="map-legend"><span class="legend-marker"></span> Punto de reciclaje verificado</div>
+      </aside>
+      <div class="map-frame">
+        <div id="recycling-map" role="application" aria-label="Mapa interactivo de Las Heras, Mendoza"></div>
+        <div class="map-top-note"><span class="live-dot"></span> LAS HERAS, MENDOZA <span>·</span> OPENSTREETMAP</div>
+        <button id="map-reset" class="map-reset" type="button"><i data-lucide="locate-fixed"></i><span>VOLVER A LAS HERAS</span></button>
+        <div id="map-notice" class="map-notice" role="status"><span class="notice-icon"><i data-lucide="map"></i></span><strong>Estamos armando el mapa.</strong><span>Los puntos verdes se publicarán acá cuando sus ubicaciones y datos estén verificados. No mostramos ubicaciones sin confirmar.</span></div>
+        <div class="map-attribution-note">© OpenStreetMap contributors</div>
+      </div>
+    </div>
+    <p class="map-data-note"><i data-lucide="badge-check"></i> La información de los puntos se incorporará solo cuando pueda verificarse con fuentes oficiales.</p>
+  </section>
+
+  <section class="education-section paper-grain section-pad" id="reciclar">
+    <div class="section-heading reveal">
+      <div><span class="section-kicker">02 / GUÍA PARA SEPARAR</span><h2>¿Qué va en cada<br><em>bolsa?</em></h2></div>
+      <p>Separar bien es más fácil de lo que parece. Elegí un material y descubrí cómo prepararlo para que pueda tener una nueva vida.</p>
+    </div>
+    <div class="material-grid">
+      <article class="material-card card-plastic reveal">
+        <div class="card-topline"><span>01 — RECICLABLE</span><i data-lucide="arrow-up-right"></i></div>
+        <div class="material-illustration illustration-plastic"><span class="illustration-orbit"></span><i data-lucide="bottle-wine"></i><span class="illustration-spark">✳</span></div>
+        <h3>Plástico</h3><p class="material-intro">Envases limpios y secos pueden volver a ser materia prima.</p>
+        <div class="material-details">
+          <div><strong>¿QUÉ INCLUYE?</strong><p>Botellas de agua y gaseosas, envases de shampoo, botellas de detergente, algunos recipientes de alimentos y tapitas de plástico.</p></div>
+          <div><strong>ANTES DE LLEVARLO</strong><ul><li>Vaciar los envases.</li><li>Enjuagarlos si tienen restos y dejarlos secar.</li><li>Aplastarlos si es posible.</li></ul></div>
+        </div>
+        <button class="card-expand" type="button" aria-expanded="false">VER CÓMO PREPARAR <i data-lucide="plus"></i></button>
+      </article>
+      <article class="material-card card-paper reveal">
+        <div class="card-topline"><span>02 — RECICLABLE</span><i data-lucide="arrow-up-right"></i></div>
+        <div class="material-illustration illustration-paper"><span class="paper-sheet sheet-back"></span><span class="paper-sheet sheet-front"><i data-lucide="newspaper"></i></span><span class="illustration-spark">✳</span></div>
+        <h3>Papel y cartón</h3><p class="material-intro">Un papel limpio y seco es el comienzo de una nueva historia.</p>
+        <div class="material-details">
+          <div><strong>¿QUÉ INCLUYE?</strong><p>Cajas de cartón, diarios y revistas, hojas de papel, cuadernos usados y envases de cartón limpios y aceptados por el centro de reciclaje.</p></div>
+          <div><strong>ANTES DE LLEVARLO</strong><ul><li>Mantenerlo seco y separar el papel de otros residuos.</li><li>Doblar las cajas.</li><li>Evitar papel con grasa.</li></ul></div>
+        </div>
+        <button class="card-expand" type="button" aria-expanded="false">VER CÓMO PREPARAR <i data-lucide="plus"></i></button>
+      </article>
+      <article class="material-card card-glass reveal">
+        <div class="card-topline"><span>03 — RECICLABLE</span><i data-lucide="arrow-up-right"></i></div>
+        <div class="material-illustration illustration-glass"><span class="glass-bottle"><i data-lucide="wine"></i></span><span class="glass-star">✳</span></div>
+        <h3>Vidrio</h3><p class="material-intro">Frascos y botellas pueden reciclarse muchas veces.</p>
+        <div class="material-details">
+          <div><strong>¿QUÉ INCLUYE?</strong><p>Botellas de vidrio, frascos de mermelada, frascos de conservas y envases de bebidas.</p></div>
+          <div><strong>ANTES DE LLEVARLO</strong><ul><li>Vaciar y enjuagar los recipientes.</li><li>Separarlos según las indicaciones del punto verde.</li><li>Manipularlos con cuidado para evitar cortes.</li></ul></div>
+        </div>
+        <button class="card-expand" type="button" aria-expanded="false">VER CÓMO PREPARAR <i data-lucide="plus"></i></button>
+      </article>
+      <article class="material-card card-metal reveal">
+        <div class="card-topline"><span>04 — RECICLABLE</span><i data-lucide="arrow-up-right"></i></div>
+        <div class="material-illustration illustration-metal"><span class="metal-can"><i data-lucide="cylinder"></i></span><span class="metal-spark">✳</span></div>
+        <h3>Metales</h3><p class="material-intro">Aluminio y otros metales tienen valor más allá de un solo uso.</p>
+        <div class="material-details">
+          <div><strong>¿QUÉ INCLUYE?</strong><p>Latas de gaseosas, latas de conservas, envases de aluminio y algunos objetos metálicos.</p></div>
+          <div><strong>ANTES DE LLEVARLO</strong><ul><li>Vaciar las latas, enjuagarlas y dejarlas secar.</li><li>Separarlas de otros residuos.</li></ul></div>
+        </div>
+        <button class="card-expand" type="button" aria-expanded="false">VER CÓMO PREPARAR <i data-lucide="plus"></i></button>
+      </article>
+      <article class="material-card card-organic reveal">
+        <div class="card-topline"><span>05 — COMPOSTABLE</span><i data-lucide="arrow-up-right"></i></div>
+        <div class="material-illustration illustration-organic"><span class="compost-pot"><i data-lucide="sprout"></i></span><span class="organic-sun">✳</span></div>
+        <h3>Residuos orgánicos</h3><p class="material-intro">Lo que viene de la tierra puede volver a nutrirla.</p>
+        <div class="material-details">
+          <div><strong>¿QUÉ INCLUYE?</strong><p>Cáscaras de frutas, restos de verduras, cáscaras de huevo, hojas secas y yerba mate usada.</p></div>
+          <div><strong>DEL RESIDUO AL ABONO</strong><p>Con el compostaje, los restos orgánicos se descomponen de forma natural y se transforman en abono para nutrir la tierra. Separalos de los residuos reciclables y consultá qué acepta tu compostera.</p></div>
+        </div>
+        <button class="card-expand" type="button" aria-expanded="false">DESCUBRIR EL COMPOST <i data-lucide="plus"></i></button>
+      </article>
+      <article class="material-card card-oil reveal">
+        <div class="card-topline"><span>06 — RECOLECCIÓN ESPECIAL</span><i data-lucide="arrow-up-right"></i></div>
+        <div class="material-illustration illustration-oil"><span class="oil-drop"><i data-lucide="droplet"></i></span><span class="oil-ripple"></span></div>
+        <h3>Aceite usado</h3><p class="material-intro">Una pequeña cantidad puede contaminar muchísima agua.</p>
+        <div class="material-details">
+          <div><strong>¿QUÉ INCLUYE?</strong><p>Aceite que sobra después de cocinar.</p></div>
+          <div><strong>ANTES DE LLEVARLO</strong><ul><li>Esperar a que se enfríe.</li><li>Colocarlo en una botella plástica cerrada.</li><li>Llevarlo a un punto de recolección autorizado.</li></ul></div>
+        </div>
+        <div class="oil-warning"><i data-lucide="triangle-alert"></i><span>NUNCA arrojes aceite usado por el desagüe.</span></div>
+        <button class="card-expand" type="button" aria-expanded="false">VER CÓMO PREPARAR <i data-lucide="plus"></i></button>
+      </article>
+    </div>
+    <div class="education-foot reveal"><i data-lucide="info"></i><p>¿Tenés dudas? <strong>Las reglas pueden variar según el centro de recepción.</strong> Consultá siempre qué materiales acepta tu punto verde.</p></div>
+  </section>
+
+  <section class="about-section section-pad" id="sobre-aura">
+    <div class="about-intro reveal"><span class="section-kicker">03 / NUESTRA RAZÓN DE SER</span><h2>UN PEQUEÑO CAMBIO<br>PUEDE GENERAR<br><em>UN GRAN IMPACTO.</em></h2></div>
+    <div class="about-copy reveal"><p>AURA nace con el objetivo de acercar el reciclaje a los vecinos de Las Heras. Queremos facilitar el acceso a los puntos verdes y enseñar cómo separar correctamente los residuos para construir una comunidad más consciente y responsable con el medioambiente.</p><span class="about-signature">Un proyecto con raíces locales <i data-lucide="sprout"></i></span></div>
+    <div class="values-row">
+      <article class="value-item reveal"><span class="value-number">01</span><span class="value-icon"><i data-lucide="book-open"></i></span><h3>Informar</h3><p>Ideas claras para que separar sea simple para todos.</p></article>
+      <article class="value-item reveal"><span class="value-number">02</span><span class="value-icon"><i data-lucide="recycle"></i></span><h3>Reciclar</h3><p>Cada material en su lugar, cada gesto cuenta.</p></article>
+      <article class="value-item reveal"><span class="value-number">03</span><span class="value-icon"><i data-lucide="sprout"></i></span><h3>Transformar</h3><p>Pequeñas acciones que construyen un futuro común.</p></article>
+    </div>
+    <div class="about-stamp" aria-hidden="true"><span>LAS HERAS<br>CON FUTURO</span><i data-lucide="leaf"></i></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a class="brand brand-footer" href="#inicio"><span class="brand-mark"><i data-lucide="leaf"></i></span><span class="brand-copy"><strong>AURA</strong><small>APP URBANA DE RECICLAJE AMBIENTAL</small></span></a>
+      <p>Una comunidad más circular<br>empieza con un gesto cotidiano.</p>
+    </div>
+    <div class="footer-nav"><span class="footer-label">EXPLORÁ</span><a href="#inicio">Inicio</a><a href="#mapa">Mapa de reciclaje</a><a href="#reciclar">¿Cómo reciclar?</a><a href="#sobre-aura">Sobre AURA</a></div>
+    <div class="footer-location"><span class="footer-label">NUESTRA CASA</span><p><i data-lucide="map-pin"></i> Las Heras, Mendoza<br><span>Argentina</span></p><span class="footer-slogan">EL CAMBIO<br>EMPIEZA CON VOS.</span></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AURA · APP URBANA DE RECICLAJE AMBIENTAL</span><a href="#inicio">VOLVER ARRIBA ↑</a><span>HECHO CON RAÍCES LOCALES <i data-lucide="heart"></i></span></div>
+</footer>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/mapa.js') }}"></script>
+{% endblock %}
