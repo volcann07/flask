@@ -96,6 +96,8 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .section-heading { margin-bottom: 48px; display: flex; align-items: end; justify-content: space-between; gap: 50px; }
 .section-heading h2 { margin: 16px 0 0; font: 400 clamp(43px, 5vw, 64px)/.98 var(--serif); letter-spacing: -.04em; }
 .section-heading > p { width: min(385px, 40%); margin: 0 0 6px; color: #6b6958; font-size: 14px; line-height: 1.8; }
+.map-section .section-heading { flex-direction: column; align-items: center; text-align: center; }
+.map-section .section-heading > p { width: min(600px, 100%); margin: 18px 0 0; }
 .map-section { background: #f5f0d9; }
 .map-layout { min-height: 542px; display: grid; grid-template-columns: 322px minmax(0, 1fr); border: 1px solid var(--line); background: #fffdf0; box-shadow: 9px 10px 0 rgba(40, 54, 24, .06); }
 .map-sidebar { padding: 24px 21px 18px; display: flex; flex-direction: column; }
