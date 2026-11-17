@@ -159,13 +159,19 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .illustration-orbit::before { position: absolute; inset: 11px; content: ""; border: 1px solid rgba(40, 54, 24, .15); border-radius: 50%; }
 .illustration-plastic > svg { padding: 13px; width: 84px; height: 106px; border: 2px solid var(--forest); border-radius: 19px 19px 15px 15px; background: #9bab78; }
 .illustration-spark { position: absolute; top: 15px; right: 30px; color: var(--clay); font-size: 24px; }
-.material-card h3 { margin: 0 0 7px; font: 27px var(--serif); letter-spacing: -.02em; }
-.material-intro { min-height: 40px; margin: 0; color: #74715e; font-size: 11px; line-height: 1.6; }
+.material-card h3 { margin: 0 0 7px; font: 35px var(--serif); letter-spacing: -.02em; }
+.material-intro { min-height: 40px; margin: 0; color: #74715e; font-size: 16px; line-height: 1.6; }
 .material-details { max-height: 0; margin-top: 0; overflow: hidden; opacity: 0; transition: max-height .35s ease, opacity .25s, margin .25s; }
 .material-card.is-expanded .material-details { max-height: 350px; margin-top: 19px; opacity: 1; }
 .material-details > div + div { margin-top: 13px; padding-top: 11px; border-top: 1px solid var(--line); }
 .material-details strong { color: var(--olive); font: 8px var(--mono); letter-spacing: .07em; }
 .material-details p, .material-details ul { margin: 6px 0 0; color: #615f4f; font-size: 10px; line-height: 1.6; }
+.material-details > div:first-child strong { font-size: 10px; }
+.material-details > div:first-child p { font-size: 13px; }
+.material-details > div:nth-child(2) strong { font-size: 10px; }
+.material-details > div:nth-child(2) ul { font-size: 13px; }
+.card-organic .material-details > div:nth-child(2) strong { font-size: 11px; }
+.card-organic .material-details > div:nth-child(2) p { font-size: 13px; }
 .material-details ul { padding-left: 14px; }.material-details li { padding-left: 2px; margin: 2px 0; }
 .card-expand { width: 100%; margin-top: 17px; padding: 11px 0 0; display: flex; align-items: center; justify-content: space-between; color: var(--forest); border: 0; border-top: 1px solid var(--line); background: transparent; cursor: pointer; font: 8px var(--mono); letter-spacing: .06em; }
 .card-expand svg { width: 15px; height: 15px; }
@@ -291,7 +297,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .material-grid { grid-template-columns: 1fr; gap: 12px; }
   .material-card { min-height: auto; padding: 19px; }
   .material-illustration { height: 126px; }
-  .material-card h3 { font-size: 26px; }
+  .material-card h3 { font-size: 33px; }
   .material-intro { min-height: 0; }
   .material-card.is-expanded .material-details { max-height: 450px; }
   .education-foot { align-items: flex-start; padding: 14px; }
