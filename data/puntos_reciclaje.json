@@ -1,5 +1,24 @@
 {
-  "verified": false,
-  "message": "Aún no hay puntos de reciclaje de Las Heras cargados con información oficial verificada.",
-  "points": []
+  "points":[
+    {
+      "name": "Plaza Marcos Burgos",
+      "address": "Pres. Juan Domingo Perón 559, M5539 Las Heras, Mendoza",
+      "lat": -32.850148562680076, 
+      "lng": -68.84055243841466,
+      "verified": true,
+      "materials": ["Plástico","Papel y Cartón"],
+      "hours": "Lunes a Domingo 8:00-18:00",
+      "info": "Propuesta de punto de reciclaje"
+    },
+     {
+      "name": "Centro Verde las Heras",
+      "address": "Calle 13 S/N, M5541 Las Heras, Mendoza",
+      "lat": -32.821190041153365, 
+      "lng":  -68.8140378032294,-32.821190041153365, -68.8140378032294-32.821190041153365, -68.8140378032294
+      "verified": true,
+      "materials": ["Plástico","Papel y Cartón","Vidrio","Metal"],
+      "hours": "Lunes a Viernes 8:30-20:30",
+      "info": "Punto de reciclaje de la municipalidad"
+    }
+  ] 
 }
